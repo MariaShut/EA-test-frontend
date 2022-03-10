@@ -1,0 +1,202 @@
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Background SVG elements, corners design  */
+#bg-element_left-corner,
+#bg-element_right-corner {
+    position: absolute;
+    top: 0;
+    max-width: 40vw;
+}
+
+#bg-element_left-corner {
+    left: 0;
+}
+
+#bg-element_right-corner {
+    right: 0;
+}
+
+/* Main content*/
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0 6%;
+    flex: 1;
+}
+
+.logo {
+    width: 200px;
+}
+
+h1 {
+    color: #A4ADBA;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 4% 0 0;
+    text-align: center;    
+}
+
+p {
+    margin: 0;
+    max-width: 30%; /* adjusting for line break as in sample */
+    text-align: center;
+}
+
+/* Countdown*/
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin: 2% 0 4%;
+}
+
+.countdown__item {
+    min-width: 8vw;
+}
+
+/* countdown number characters */
+h2 {
+    color: #162C4E;
+    margin: 0;
+    font-size: 3.5rem;
+}
+
+/* adding red wave element to countdown value names */
+.countdown__subtitle {
+    background: url('images/time-bg.svg') 50% 50% no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 8em;
+    color: white;
+    min-width: 6em;
+    min-height: 3em;
+    padding: 0 1em;
+}
+/* Countdown end*/
+
+
+/* Button */
+.button {
+    background-color: #1D4169;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 1em 3em;
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-top: 1%;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s linear;
+    position: relative;
+}
+
+.button:hover {
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(5px);
+}
+
+.button:active {
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.7) inset, 0 5px 10px rgba(0, 0, 0, 0.4);
+    transform: translateY(7px);
+}
+
+/* adding an arrow to the button */
+.arrow-button:after {
+    content: "\279C";
+    padding-left: 2em;
+}
+
+.arrow-button {
+    padding: 0.8em 1em 0.8em 1.5em;
+}
+/* Main content end */
+
+
+/* Footer start */
+footer {
+    background-color: #162C4E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    position: relative;
+    margin: 4% 0;
+}
+
+input {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+}
+
+input[type="email"] {
+    padding: 1.4em;
+    min-width: 30vw;
+}
+
+input[type="email"]:focus {
+    outline: 2px solid #A4ADBA;
+    color: #162C4E;
+}
+
+input[type="submit"] {
+    position: absolute;
+    right: 0.4em;
+    top: 0.4em;
+    background-color: rgba(223,34,36,1);
+    color: white;
+    font-size: 1em;
+    padding: 0.6em 0.8em;
+}
+
+
+input[type="submit"]:hover {
+    background-color: rgba(223,34,36,0.7);
+}
+
+input[type="submit"]:focus {
+    outline: none;
+    color: white;
+    background-color: #162C4E;
+    box-shadow: -10px 0 5px #A4ADBA;
+}
+/* Footer end */
+
+
+@media (max-width: 768px) {
+    body {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 3em;
+        margin-top: 20%;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    p {
+        max-width: 40%;
+    }
+
+    .flex-container {
+        margin: 10% 0 20%;
+    }
+}
